@@ -1,7 +1,7 @@
 <template>
   <div class="list-group list-group-transparent px-4 mb-3">
     <a :class="['list-group-item', 'list-group-item-action', 'd-flex', 'align-items-center', (index === 0 ? 'active' : '')]"
-       v-for="(navData, index) in navigations" :href="navData.url">
+       v-for="(navData, index) in navigations" :href="navData.url" :key="index">
       {{ navData.name || '---' }}
       <small class="text-secondary ms-auto" v-if="navData.count > 0">{{ navData.count }}</small>
     </a>
